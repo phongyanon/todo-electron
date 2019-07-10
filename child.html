@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo Mock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body{
+    display: flex;
+    min-height: 100vh;
+}
+/* child page */
+.container-form-todo{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+.form-todo input{
+    font-size: 36px;
+    padding-left: 10px;
+}
+.form-todo button{
+    margin-left: 10px;
+    height: 38px;
+    background-color: #ecf0f1;
+    color: #636e72;
+    border: 1px solid #2d3436;
+    font-size: 20px;
+    transition: 0.4s;
+}
+.form-todo button:hover{
+    background-color: #b2bec3;
+    color: #2d3436;
+}
+</style>
+<body>
+    <div class="container-form-todo">
+        <div class="form-todo">
+            <input type="text" name="todo-created" id="todo-created" value="">
+            <button onclick="onClickCreate()" id="create-todo-btn">create</button>
+            <button onclick="onClickCancel()" id="cancel-todo-btn">cancel</button>
+        </div>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo Mock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-menu">
+            <div class="logo">
+                <h3>Todo</h3>
+            </div>
+            <div class="menu-button">
+                <button id="new-todo-btn">New</button>
+                <button id="overview-btn">Overview</button>
+                <button id="active-btn">Active</button>
+                <button id="complete-btn">Completed</button>
+            </div>
+        </div>
+        <div class="main-space">
+            <div class="active-space" id="space-active">
+                <div class="active-title">
+                    <h3>Active</h3>                    
+                </div>                
+                <div class="todo-container" id="todo-active">
+                    <!-- <div class="todo-item">
+                        <p>learn flutter </p>
+                        <button>complete</button>
+                        <button>delete</button>  
+                    </div>
+                    <div class="todo-item">
+                        <p>buy something</p>
+                        <button>complete</button>
+                        <button>delete</button>  
+                    </div>
+                    <div class="todo-item">
+                        <p>customer meeting</p>
+                        <button>complete</button>
+                        <button>delete</button>  
+                    </div> -->
+                </div>
+
+            </div>
+            <div class="completed-space" id="space-complete">
+                <div class="active-title">
+                    <h3>Completed</h3>                    
+                </div>                
+                <div class="todo-container" id="todo-complete">
+                    <div class="todo-item">
+                        <p>learn flutter </p>
+                        <button>active</button>
+                        <button>delete</button>  
+                    </div>
+                    <div class="todo-item">
+                        <p>buy something</p>
+                        <button>active</button>
+                        <button>delete</button>  
+                    </div>
+                    <div class="todo-item">
+                        <p>customer meeting</p>
+                        <button>active</button>
+                        <button>delete</button>  
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>
