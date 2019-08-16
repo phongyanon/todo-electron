@@ -55,6 +55,11 @@ html, body{
     color: #2d3436;
     border-color: #2d3436;
 }
+.menu-button p{
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+}
 .main-space{
     flex-grow: 8;
     margin: 10px;
