@@ -55,10 +55,15 @@ html, body{
     color: #2d3436;
     border-color: #2d3436;
 }
-.menu-button p{
+.menu-button #version{
     position: absolute;
     left: 15px;
-    bottom: 5px;
+    bottom: 200px;
+}
+.menu-button #log_message{
+    position: absolute;
+    left: 15px;
+    bottom: 180px;
 }
 .main-space{
     flex-grow: 8;
@@ -136,3 +141,16 @@ html, body{
     background-color: #b2bec3;
     color: #2d3436;
 }
+#notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .hidden {
+    display: none;
+  }

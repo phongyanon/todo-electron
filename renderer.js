@@ -82,3 +82,41 @@ ipc.on('completeReply', (event, args) => {
 ipc.on('actionReply', (event, args) => {
     ipc.send('getTodo', current_space);
 });
+
+
+const version = document.getElementById('version');
+const notification = document.getElementById('notification');
+const message = document.getElementById('message');
+const restartButton = document.getElementById('restart-button');
+const logMessage = document.getElementById('log_message');
+
+ipc.send('app_version');
+ipc.on('app_version', (event, arg) => {
+  ipc.removeAllListeners('app_version');
+  version.innerText = 'Version ' + arg.version;
+});
+
+ipc.on('update_available', () => {
+  ipc.removeAllListeners('update_available');
+  message.innerText = 'A new update is available. Downloading now...';
+  notification.classList.remove('hidden');
+});
+
+ipc.on('log_message', (event, arg) => {
+    logMessage.innerText = arg.msg;
+});
+
+ipc.on('update_downloaded', () => {
+  ipc.removeAllListeners('update_downloaded');
+  message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+  restartButton.classList.remove('hidden');
+  notification.classList.remove('hidden');
+});
+
+function closeNotification() {
+  notification.classList.add('hidden');
+}
+
+function restartApp() {
+  ipc.send('restart_app');
+}

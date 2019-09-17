@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo Mock</title>
+    <title>Todo Mock Version 0.0.1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,10 +18,18 @@
                 <button id="overview-btn">Overview</button>
                 <button id="active-btn">Active</button>
                 <button id="complete-btn">Completed</button>
-                <p>Version 0.1.2</p>
             </div>
         </div>
         <div class="main-space">
+            <div id="notification" class="hidden">
+                <p id="message"></p>
+                <button id="close-button" onClick="closeNotification()">
+                  Close
+                </button>
+                <button id="restart-button" onClick="restartApp()" class="hidden">
+                  Restart
+                </button>
+            </div>
             <div class="active-space" id="space-active">
                 <div class="active-title">
                     <h3>Active</h3>                    
